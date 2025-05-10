@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lens of Life - Photography Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section with Interactive Button -->
+        <section class="hero">
+            <h1>Lens of Life</h1>
+            <p>Capturing the beauty of every moment</p>
+            <button id="captureButton">Capture This Moment</button>
+            <p class="hint">Double-click for a shutter surprise!</p>
+        </section>
+
+        <!-- Portfolio Gallery Section -->
+        <section class="gallery-section">
+            <h2>Featured Shots</h2>
+            <div class="gallery">
+                <img id="portfolioImage" src="https://picsum.photos/600/400?image=1" alt="Portfolio Image">
+                <div class="gallery-controls">
+                    <button id="prevBtn">Previous</button>
+                    <button id="nextBtn">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Categories Section -->
+        <section class="categories">
+            <h2>Explore by Category</h2>
+            <div class="category-tabs">
+                <button class="tab-button active" data-tab="nature">Nature</button>
+                <button class="tab-button" data-tab="portraits">Portraits</button>
+                <button class="tab-button" data-tab="events">Events</button>
+            </div>
+            <div class="tab-content">
+                <div id="nature" class="tab-pane active">
+                    <h3>Nature Photography</h3>
+                    <p>Immerse yourself in the beauty of landscapes, wildlife, and serene moments captured in nature.</p>
+                </div>
+                <div id="portraits" class="tab-pane">
+                    <h3>Portrait Photography</h3>
+                    <p>Celebrating individuality through stunning, emotive portraits that tell a story.</p>
+                </div>
+                <div id="events" class="tab-pane">
+                    <h3>Event Photography</h3>
+                    <p>Relive the joy of weddings, celebrations, and milestones through vibrant event captures.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section class="booking">
+            <h2>Book a Session</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" required>
+                    <span class="error" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" required>
+                    <span class="error" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell Us About Your Session (min 10 chars):</label>
+                    <textarea id="message" required></textarea>
+                    <span class="error" id="messageError"></span>
+                </div>
+                <button type="submit">Send Request</button>
+            </form>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
